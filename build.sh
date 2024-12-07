@@ -7,8 +7,8 @@ echo "Checking required environment variables..."
 : "${SECRET_KEY:?SECRET_KEY is not set}"
 
 echo "Ensuring correct Python version..."
-if ! python --version | grep -q "3.11"; then
-    echo "Python 3.11 is required. Aborting."
+if ! python --version | grep -q "3.12"; then
+    echo "Python 3.12 is required. Aborting."
     exit 1
 fi
 
