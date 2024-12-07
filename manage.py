@@ -7,7 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
     settings_module = (
-    "api.deployment_settings"
+    "blog_backend.deployment_settings"
     if "RENDER_EXTERNAL_HOSTNAME" in os.environ
     else "blog_backend.settings"
     )
