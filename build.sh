@@ -6,12 +6,6 @@ echo "Checking required environment variables..."
 : "${DATABASE_URL:?DATABASE_URL is not set}"
 : "${SECRET_KEY:?SECRET_KEY is not set}"
 
-echo "Ensuring correct Python version..."
-if ! python --version | grep -q "3.12"; then
-    echo "Python 3.12 is required. Aborting."
-    exit 1
-fi
-
 echo "Upgrading pip..."
 pip install --upgrade pip
 
