@@ -2,11 +2,26 @@
 # Exit on error
 set -o errexit
 
-# Modify this line as needed for your package manager (pip, poetry, etc.)
+echo "Checking required environment variables..."
+: "${DATABASE_URL:?DATABASE_URL is not set}"
+: "${SECRET_KEY:?SECRET_KEY is not set}"
+
+echo "Ensuring correct Python version..."
+if ! python --version | grep -q "3.11"; then
+    echo "Python 3.11 is required. Aborting."
+    exit 1
+fi
+
+echo "Upgrading pip..."
+pip install --upgrade pip
+
+echo "Installing dependencies..."
 pip install -r requirements.txt
 
-# Convert static asset files
+echo "Collecting static files..."
 python manage.py collectstatic --no-input
 
-# Apply any outstanding database migrations
+echo "Applying database migrations..."
 python manage.py migrate
+
+echo "Build script completed successfully."
