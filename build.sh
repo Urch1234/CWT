@@ -19,3 +19,8 @@ echo "Applying database migrations..."
 python manage.py migrate
 
 echo "Build script completed successfully."
+
+if [[$CREATE_SUPERUSER]]:
+then
+    python manage.py createsuperuser --no-input
+fi
