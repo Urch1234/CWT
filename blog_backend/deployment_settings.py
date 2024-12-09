@@ -40,3 +40,12 @@ DATABASES = {
         default=os.environ["DATABASE_URL"], conn_max_age=600
     )
 }
+
+STATICFILES_DIRS = []
+
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")

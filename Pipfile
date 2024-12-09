@@ -16,6 +16,7 @@ psycopg2 = "*"
 dj-database-url = "*"
 whitenoise = "*"
 uvicorn = "*"
+python-dotenv = "*"
 
 [dev-packages]
 
