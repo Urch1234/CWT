@@ -21,9 +21,9 @@ python manage.py migrate
 echo "Build script completed successfully."
 
 # Check if CREATE_SUPERUSER is set and equal to 'true'
-if [[ "$CREATE_SUPERUSER" == "true" ]]; then
-    echo "Creating superuser..."
-    python manage.py createsuperuser --no-input
-else
-    echo "Skipping superuser creation."
-fi
+# if [[ "$CREATE_SUPERUSER" == "true" ]]; then
+#     echo "Creating superuser..."
+#     python manage.py createsuperuser --no-input
+# else
+#     echo "Skipping superuser creation."
+# fi
