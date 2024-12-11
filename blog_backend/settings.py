@@ -85,8 +85,15 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React frontend
+    "http://localhost:5173",  # React frontend
     "http://localhost:8000",  # Django backend
+]
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_HEADERS = [
+    "content-type",
+    "authorization",  # Allow the 'authorization' header for the token
 ]
 
 

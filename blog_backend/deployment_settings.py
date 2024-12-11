@@ -22,9 +22,9 @@ MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",  # added
 ]
 
-# CORS_ALLOWED_ORIGINS = [
-
-# ]
+CORS_ALLOWED_ORIGINS = [
+    "https://cwtblog.onrender.com"
+]
 
 STORAGES = {
     "default": {
