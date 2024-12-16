@@ -195,3 +195,5 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
+
+DEFAULT_FROM_EMAIL = "admin@cwt.onrender.com"

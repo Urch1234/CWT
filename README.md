@@ -17,6 +17,7 @@ A simple blog API with RESTful endpoints for creating, retrieving, updating and 
 - Django 4.2+
 - PostgreSQL or SQLite for local development
 - Node.js (if frontend is included)
+- React + Vite
 
 ## Apply Migrations
 
