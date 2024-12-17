@@ -22,6 +22,10 @@ class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializers
 
+    def perform_create(self, serializer):
+        # Automatically set the logged-in user as the author of the post
+        serializer.save(author=self.request.user)
+
 
 class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     """
